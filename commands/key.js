@@ -1,6 +1,7 @@
 const inquirer = require("inquirer").default;
 const colors = require("colors");
 const KeyManager = require('../lib/KeyManager');
+const { isRequired } = require('../utils/validation')
 
 
 const key = {
@@ -10,7 +11,8 @@ const key = {
             {
                 type: "input",
                 name: "key",
-                message: "Enter the API key ".green + "https://coingecko.com"
+                message: "Enter the API key ".green + "https://coingecko.com",
+                validate: isRequired
             }
         ]);
 
