@@ -1,20 +1,20 @@
 const { Command } = require('commander');
 const program = new Command();  // ✅ Correct way to use Commander.js
-
+const key = require('../commands/key')
 program
     .command('set')
     .description('Set API Key -- Get at https://coingecko.com')
-    .action(() => console.log('Hello from set'));
+    .action(key.set);
 
     program
     .command('show')
     .description('Show API Key ')
-    .action(() => console.log('Hello from show'));
+    .action(key.show);
 
     program
     .command('remove')
     .description('Remove API key')
-    .action(() => console.log('Hello from remove'));
+    .action(key.remove);
 
 
 
