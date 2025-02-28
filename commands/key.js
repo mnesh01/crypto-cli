@@ -28,12 +28,9 @@ const key = {
             const key = keyManager.getKey();
             
             console.log('Current API key', key.yellow);
-        } catch (error) {   
+        } catch (error) {
+            console.error(error.message.red)   
         }
     },
-    remove() {
-        console.log("Hello from remove")
-    }
 }
-
 module.exports = key;
