@@ -32,5 +32,16 @@ const key = {
             console.error(error.message.red)   
         }
     },
+    remove() {
+        try {
+            const keyManager = new KeyManager();
+            keyManager.deleteKey();
+            
+            console.log("Key removed".blue);
+
+        } catch (error) {
+            console.error(error.message.red)   
+        }
+    },
 }
 module.exports = key;
