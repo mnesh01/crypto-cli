@@ -15,7 +15,4 @@ program
     .command('remove')
     .description('Remove API key')
     .action(key.remove);
-
-
-
 program.parse(process.argv);
